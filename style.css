@@ -38,7 +38,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 37vh; /* Ajuste a altura conforme necessário */
+    height: 17vh; /* Ajuste a altura conforme necessário */
+    margin-bottom: 102px;
 }
 
 .button {
