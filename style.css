@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+
+body {
+    background-image: url(assets/first.png); /* Substitua pelo caminho da sua imagem */
+    background-size: cover;
+    background-position: center;
+    color: #212121;
+    background-color: #0c1c40; /* #06144e */
+    text-align: center;
+    padding-top: 50px;
+    margin: 0;
+}
+
+.title {
+    font-family: "Cabin", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-size: 25px;
+    color: white !important; 
+    text-align: center;
+    padding-top: 0px;
+    margin-top: 9%;
+}
+
+.sub {
+    font-family: "Cabin", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-size: medium;
+    color: white !important;
+    text-align: center;
+    padding-top: 0px;
+    margin-top: -2%;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 37vh; /* Ajuste a altura conforme necessário */
+}
+
+.button {
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 15px;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    color: #212121;
+    background: rgb(251, 232, 124);
+    background: linear-gradient(
+        90deg,
+        rgba(251, 232, 124, 1) 0%,
+        rgba(199, 148, 40, 1) 100%,
+        rgba(196, 124, 52, 1) 100%
+    );
+    border: 1px solid
+        linear-gradient(
+            90deg,
+            rgba(251, 232, 124, 1) 0%,
+            rgba(199, 148, 40, 1) 100%,
+            rgba(196, 124, 52, 1) 100%
+        ); /* Cor dourada */
+    border-radius: 5px;
+    line-height: 3em;
+    padding-left: 5em;
+    padding-right: 5em;
+    box-shadow: 0 0 30px 0 rgba(255, 215, 0, 0.5);
+    transition: all 0.2s ease-in;
+    width: 200px; /* Largura do botão */
+    height: 50px; /* Altura do botão */
+    max-width: 100%;
+    white-space: nowrap; /* Impede que o texto quebre */
+    overflow: hidden; /* Esconde qualquer texto que exceda o botão */
+    display: flex; /* Torna o botão um contêiner flexível */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+}
+
+.button:hover {
+    color: #212121;
+    box-shadow: 0 0 30px 0 rgba(255, 255, 255, 0.5); /* Cor dourada */
+    background-color: #FFD700; /* Cor dourada */
+    transition: all 0.2s ease-out;
+}
+
+.button:active {
+    box-shadow: 0 0 0 0 transparent;
+    transition: box-shadow 0.2s ease-in;
+}
+
+.button:before {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: white;
+    box-shadow: 0 0 15px 3px white;
+    transform: skewX(-20deg);
+}
+
+@keyframes shine {
+    from {
+        opacity: 0;
+        left: 0%;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        left: 100%;
+    }
+}
+
+.button:hover:before {
+    animation: shine 0.5s 0s linear;
+}
+
+.infos {
+    font-family: "Cabin", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    color: white !important;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.grid img {
+    width: 720px;
+    height: 280px;
+}
+.grid2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.grid2 img {
+    width: 720px;
+    height: 290px;
+}
+
+footer {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: 20px;
+}
+
+footer img {
+    display: flex;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .title {
+        font-size: 20px;
+        margin-top: 20%;
+    }
+
+    .sub {
+        font-size: smaller;
+        margin-top: -5%;
+    }
+
+    .button-container {
+        height: 20vh;
+    }
+
+    .button {
+        font-size: 12px;
+        width: 150px;
+        height: 40px;
+    }
+
+    .infos {
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .grid img, .grid2 img {
+        width: 90%;
+        height: auto;
+    }
+
+    .grid, .grid2 {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 18px;
+        margin-top: 30%;
+    }
+
+    .sub {
+        font-size: smaller;
+        margin-top: -8%;
+    }
+
+    .button-container {
+        height: 15vh;
+    }
+
+    .button {
+        font-size: 10px;
+        width: 120px;
+        height: 35px;
+    }
+
+    .infos {
+        font-size: 18px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .grid img, .grid2 img {
+        width: 100%;
+        height: auto;
+    }
+
+    .grid, .grid2 {
+        margin-top: 10px;
+    }
+}
